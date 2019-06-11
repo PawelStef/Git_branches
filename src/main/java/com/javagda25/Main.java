@@ -11,7 +11,7 @@ public class Main {
         //Scanner scanner = new Scanner(System.in);
 
 
-        try(PrintWriter printWriter = new PrintWriter(new FileWriter("data.txt", true));) {
+        try(PrintWriter printWriter = new PrintWriter(new FileWriter("data.txt", true))) {
             //System.out.println("Dopisz coś do pliku");
             printWriter.println("Hello world!");
 
