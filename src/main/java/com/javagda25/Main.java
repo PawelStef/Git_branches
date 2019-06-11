@@ -8,13 +8,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = null;
+
         int howMuch = 0;
 
         File plik = new File("data.txt");
         if (plik.exists()) {
-            try {
-                scanner = new Scanner(new FileReader("data.txt"));
+            try(Scanner scanner = new Scanner(new FileReader("data.txt"))) {
+
 
                 if (!scanner.hasNextLine()) {
                     System.out.println("brak treeści");
@@ -30,6 +30,6 @@ public class Main {
             }
 
         }
-        System.out.println("linie: "+howMuch);
+        System.out.println("linie: " + howMuch);
     }
 }
