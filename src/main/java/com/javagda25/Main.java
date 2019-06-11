@@ -7,5 +7,6 @@ public class Main {
         Write write = new Write();
         write.writeFile();
         Read read =new Read();
+        read.readFile();
 
 }}
